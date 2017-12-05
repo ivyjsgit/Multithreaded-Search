@@ -1,3 +1,5 @@
+package search;
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -42,5 +44,18 @@ public class searcher implements Runnable {
 		t = new Thread(this, threadName);
 		t.start();
 	}
+	public HashSet search(String query) {
+		HashSet<String> h = new HashSet();
+		for (Site siteClass : visitedSites.values()) {
+
+			if (siteClass.getText() != null && (siteClass.getText().toLowerCase().contains(query.toLowerCase())
+					|| siteClass.getUrl().contains(query.toLowerCase()))) {
+				h.add(siteClass.getUrl());
+				System.out.println(siteClass.getUrl());
+			}
+		}
+		return h;
+	}
+	
 
 }

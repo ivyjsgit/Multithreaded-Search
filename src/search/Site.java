@@ -1,3 +1,4 @@
+package search;
 import org.jsoup.nodes.Document;
 
 public class Site {
