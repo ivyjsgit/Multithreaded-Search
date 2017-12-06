@@ -55,10 +55,8 @@ public class crawler implements Runnable {
 					}
 				}
 			}
-			// String url, String description, String text
-			// Add links to the sites to visit queue
+	
 			for (String siteString : getLinks.getLinks(docSite)) {
-				// System.out.println("Adding " + siteString);
 				Site visitingSite = new Site(siteString, "Placeholder", newSite.text());
 
 				try {

@@ -9,6 +9,10 @@ public class searcher implements Runnable {
 	String threadName;
 	ConcurrentHashMap<String, Site> visitedSites;
 
+	/**
+	 * @param threadName
+	 * @param visitedSites
+	 */
 	public searcher(String threadName, ConcurrentHashMap<String, Site> visitedSites) {
 		this.threadName = threadName;
 		this.visitedSites = visitedSites;
@@ -40,12 +44,18 @@ public class searcher implements Runnable {
 		}
 
 	}
-
+	/***
+	 * Start a new searcher thread
+	 */
 	public void start() {
 		t = new Thread(this, threadName);
 		t.start();
 	}
-
+	/***
+	 * 
+	 * @param query the string to search for within the sites already visited
+	 * @return HashSet of all sites containing the query (inside a word, URL, text, etc.)
+	 */
 	public HashSet search(String query) {
 		HashSet<String> h = new HashSet();
 		for (Site siteClass : visitedSites.values()) {
@@ -58,7 +68,10 @@ public class searcher implements Runnable {
 		}
 		return h;
 	}
-
+	/***
+	 * Get all visited sites
+	 * @return HashSet of visited sites
+	 */
 	public HashSet getAll() {
 		HashSet<String> h = new HashSet();
 		for (Site siteClass : visitedSites.values()) {

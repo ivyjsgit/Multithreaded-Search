@@ -1,27 +1,26 @@
 package gui;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-
-import search.*;
-import javax.swing.JTextField;
-import java.awt.BorderLayout;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JButton;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import javax.swing.JTextArea;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.text.html.HTMLEditorKit;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+
+import search.crawler;
+import search.searcher;
 
 public class mainWindow {
 
