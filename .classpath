@@ -5,5 +5,7 @@
 	<classpathentry kind="lib" path="/Users/Ivy/Downloads/jsoup-1.11.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Ivy/Downloads/jsoup-1.11.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Ivy/Downloads/commons-lang3-3.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Python36-32/share/py4j/py4j0.10.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

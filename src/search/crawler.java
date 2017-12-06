@@ -54,7 +54,7 @@ public class crawler implements Runnable {
 	}
 
 	private void generateSites() {
-		siteQueue.add("http://example.com");
+		siteQueue.add("https://en.wikipedia.org/wiki/Hat");
 
 		int count = 0;
 		// TODO Auto-generated method stub
