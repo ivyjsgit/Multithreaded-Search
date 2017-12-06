@@ -151,8 +151,7 @@ public class mainWindow {
 		gbc_btnSearch.gridy = 1;
 		frame.getContentPane().add(btnSearch, gbc_btnSearch);
 
-		updateVisited updater = new updateVisited("updater", textField_1, s);
-		updater.start();
+
 	
 	}
 
