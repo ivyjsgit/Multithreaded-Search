@@ -1,9 +1,8 @@
 package search;
 import java.util.ArrayList;
 
-import org.jsoup.*;
-import org.jsoup.nodes.*;
-import org.jsoup.select.*;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 public class getLinks {
 	public static ArrayList<String> getLinks(Document site) {
