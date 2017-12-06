@@ -30,25 +30,27 @@ public class mainWindow {
 	private JTextPane textPane;
 	private JScrollPane scrollPane;
 	private JLabel lblNewLabel;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
 	 */
-	  public void doSearch(crawler c, searcher s, JTextField textField){
-			HashSet h = s.search(textField.getText());
-			String outputText = "";
-			textPane.add(new JLabel("<html>"));
-			Iterator iter = h.iterator();
-			while (iter.hasNext()) {
-				String url = (String) iter.next();
-				outputText+= ("<a href=" + url + ">" + url + "</a>" + "<br>");
-		
-			}
-			outputText="<html>"+outputText+"</html>";
-			textPane.setText(outputText);
-			//textPane.add(new JLabel("</html>"));
+	public void doSearch(crawler c, searcher s, JTextField textField) {
+		HashSet h = s.search(textField.getText());
+		String outputText = "";
+		textPane.add(new JLabel("<html>"));
+		Iterator iter = h.iterator();
+		while (iter.hasNext()) {
+			String url = (String) iter.next();
+			outputText += ("<a href=" + url + ">" + url + "</a>" + "<br>");
 
 		}
+		outputText = "<html>" + outputText + "</html>";
+		textPane.setText(outputText);
+		// textPane.add(new JLabel("</html>"));
+
+	}
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -79,7 +81,7 @@ public class mainWindow {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 369, 65, 0 };
 		gridBagLayout.rowHeights = new int[] { 241, 20, 0 };
-		gridBagLayout.columnWeights = new double[] { 1.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.columnWeights = new double[] { 1.0, 1.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 1.0, 0.0, Double.MIN_VALUE };
 		frame.getContentPane().setLayout(gridBagLayout);
 
@@ -95,9 +97,18 @@ public class mainWindow {
 		scrollPane.setViewportView(textPane);
 		textPane.setEditable(false);
 		textPane.setEditorKit(new HTMLEditorKit());
-		
+
 		lblNewLabel = new JLabel("Search results");
 		scrollPane.setColumnHeaderView(lblNewLabel);
+
+		textField_1 = new JTextField();
+		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
+		gbc_textField_1.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_1.gridx = 1;
+		gbc_textField_1.gridy = 0;
+		frame.getContentPane().add(textField_1, gbc_textField_1);
+		textField_1.setColumns(10);
 
 		textField = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
@@ -109,7 +120,6 @@ public class mainWindow {
 		frame.getContentPane().add(textField, gbc_textField);
 		textField.setColumns(10);
 
-
 		crawler c = new crawler("myCrawler", false);
 		c.start();
 		searcher s = new searcher("mySearcher", c.visitedSites);
@@ -119,8 +129,8 @@ public class mainWindow {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
 				System.out.println(arg0);
-				if(arg0.getKeyCode()==KeyEvent.VK_ENTER) {
-					doSearch(c,s,textField);
+				if (arg0.getKeyCode() == KeyEvent.VK_ENTER) {
+					doSearch(c, s, textField);
 
 				}
 			}
@@ -131,7 +141,7 @@ public class mainWindow {
 		btnSearch.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-			doSearch(c,s,textField);
+				doSearch(c, s, textField);
 			}
 		});
 
@@ -142,8 +152,9 @@ public class mainWindow {
 		gbc_btnSearch.gridy = 1;
 		frame.getContentPane().add(btnSearch, gbc_btnSearch);
 
-		
-
+		updateVisited updater = new updateVisited("updater", textField_1, s);
+		updater.start();
+	
 	}
 
 }

@@ -64,7 +64,6 @@ public class searcher implements Runnable {
 		for (Site siteClass : visitedSites.values()) {
 
 			h.add(siteClass.getUrl());
-			System.out.println(siteClass.getUrl());
 		}
 
 		return h;
