@@ -1,25 +1,30 @@
 <html>
-<head>
-</head>
-<body>
-  <script type=text/javascript>
-    $(function() {
-      $('a#calculate').bind('click', function() {
-        $.get('/'+$('input[name="a"]').val(), function(), {
-          a: $('input[name="a"]').val(),
 
-        }, function(data) {
-          $("#result").text(data.result);
-        });
-        return false;
-      });
-    });
+<body>
+
+  First name: <input type="text" id="query" title="First Name" style="color:#888;" 
+        value="First Name" onfocus="inputFocus(this)" onblur="inputBlur(this)" ><br>
+<button onclick="getHTML()">Hello</button>
+<p id="results">
+  Test
+</p>
+  <script>
+  function getHTML(){
+  var ourRequest= new XMLHttpRequest();
+  var userQuery=document.getElementById("query").value;
+  var query='http://localhost:5000/search/'.concat(userQuery);
+  console.log(userQuery);
+  console.log(query)
+
+  ourRequest.open('GET', query);
+  ourRequest.onload=function(){
+    console.log(ourRequest.responseText);
+  	document.getElementById("results").innerHTML=ourRequest.responseText;
+  }
+  ourRequest.send();
+  }
   </script>
-  <h1>jQuery Example</h1>
-  <p><input type=text size=5 name=a> +
-   =
-     <span id=result>?</span>
-  <p><a href=# id=calculate>calculate server side</a>
+</body>
 
 </body>
-<html>
+</html>
