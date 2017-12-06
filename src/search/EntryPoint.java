@@ -22,7 +22,8 @@ public  String search(String query) {
 	String output="";
 	Iterator i =  s.search(query).iterator();
 	while(i.hasNext()) {
-		output+=i.next()+"<br>";
+		String url = (String) i.next();
+		output+="<a href=" +url+"\">" + url+"</a>" + "<br>";
 	}
 	return output;
 	

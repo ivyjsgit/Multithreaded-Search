@@ -1,30 +1,32 @@
 <html>
-
-<body>
-
-  First name: <input type="text" id="query" title="First Name" style="color:#888;" 
-        value="First Name" onfocus="inputFocus(this)" onblur="inputBlur(this)" ><br>
-<button onclick="getHTML()">Hello</button>
-<p id="results">
-  Test
-</p>
-  <script>
-  function getHTML(){
-  var ourRequest= new XMLHttpRequest();
-  var userQuery=document.getElementById("query").value;
-  var query='http://localhost:5000/search/'.concat(userQuery);
-  console.log(userQuery);
-  console.log(query)
-
-  ourRequest.open('GET', query);
-  ourRequest.onload=function(){
-    console.log(ourRequest.responseText);
-  	document.getElementById("results").innerHTML=ourRequest.responseText;
-  }
-  ourRequest.send();
-  }
-  </script>
-</body>
-
-</body>
+   <head>
+      <title>Search Engine</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   </head>
+   <body>
+      <div class="row" font-family:"Lato">
+         <div class="col-md-2 col-md-offset-5" align="center" font-family:"Lato" font-weight: thin>
+            <span font-family:"Lato"><input type="text" id="query" title="Query" style="color:#888;" 
+               value="Query" onfocus="inputFocus(this)" onblur="inputBlur(this)" font-family:"Lato" ><button onclick="getHTML()" font-family:"Lato">Search</button></span>
+            <p id="results"></p>
+         </div>
+      </div>
+      <script>
+         function getHTML(){
+         var ourRequest= new XMLHttpRequest();
+         var userQuery=document.getElementById("query").value;
+         var query='http://localhost:5000/search/'.concat(userQuery);
+         console.log(userQuery);
+         console.log(query)
+         
+         ourRequest.open('GET', query);
+         ourRequest.onload=function(){
+           console.log(ourRequest.responseText);
+         	document.getElementById("results").innerHTML=ourRequest.responseText;
+         }
+         ourRequest.send();
+         }
+      </script>
+   </body>
 </html>
