@@ -29,7 +29,6 @@ public class mainWindow {
 	private JTextPane textPane;
 	private JScrollPane scrollPane;
 	private JLabel lblNewLabel;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -100,15 +99,6 @@ public class mainWindow {
 		lblNewLabel = new JLabel("Search results");
 		scrollPane.setColumnHeaderView(lblNewLabel);
 
-		textField_1 = new JTextField();
-		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
-		gbc_textField_1.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_1.gridx = 1;
-		gbc_textField_1.gridy = 0;
-		frame.getContentPane().add(textField_1, gbc_textField_1);
-		textField_1.setColumns(10);
-
 		textField = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
 		gbc_textField.insets = new Insets(0, 0, 0, 5);
@@ -127,7 +117,6 @@ public class mainWindow {
 		textField.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent arg0) {
-				System.out.println(arg0);
 				if (arg0.getKeyCode() == KeyEvent.VK_ENTER) {
 					doSearch(c, s, textField);
 
