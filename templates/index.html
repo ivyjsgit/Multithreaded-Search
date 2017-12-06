@@ -1,0 +1,30 @@
+<html>
+
+<body>
+
+  First name: <input type="text" id="query" title="First Name" style="color:#888;" 
+        value="First Name" onfocus="inputFocus(this)" onblur="inputBlur(this)" ><br>
+<button onclick="getHTML()">Hello</button>
+<p id="results">
+  Test
+</p>
+  <script>
+  function getHTML(){
+  var ourRequest= new XMLHttpRequest();
+  var userQuery=document.getElementById("query").value;
+  var query='http://localhost:5000/search/'.concat(userQuery);
+  console.log(userQuery);
+  console.log(query)
+
+  ourRequest.open('GET', query);
+  ourRequest.onload=function(){
+    console.log(ourRequest.responseText);
+  	document.getElementById("results").innerHTML=ourRequest.responseText;
+  }
+  ourRequest.send();
+  }
+  </script>
+</body>
+
+</body>
+</html>
