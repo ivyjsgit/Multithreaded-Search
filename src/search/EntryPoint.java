@@ -1,3 +1,7 @@
+/***
+ * Entry point used to connect to py4j and flask.
+ */
+
 package search;
 
 import java.util.HashSet;
@@ -23,7 +27,7 @@ public  String search(String query) {
 	Iterator i =  s.search(query).iterator();
 	while(i.hasNext()) {
 		String url = (String) i.next();
-		output+="<a href=" +url+"\">" + url+"</a>" + "<br>";
+		output+="<a href=" +url+">" + url+"</a>" + "<br>";
 	}
 	return output;
 	
