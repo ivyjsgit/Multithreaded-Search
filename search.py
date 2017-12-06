@@ -1,5 +1,5 @@
 from py4j.java_gateway import JavaGateway
-from flask import Flask
+from flask import Flask, jsonify, render_template, request
 gateway=JavaGateway()
 app = Flask(__name__)
 
@@ -9,5 +9,5 @@ def hello_world(query):
 
 @app.route("/")
 def empty():
-    return gateway.entry_point.search("")
+    return render_template('index.html')
 app.run(host='0.0.0.0')

@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+  <script type=text/javascript>
+    $(function() {
+      $('a#calculate').bind('click', function() {
+        $.get('/'+$('input[name="a"]').val(), function(), {
+          a: $('input[name="a"]').val(),
+
+        }, function(data) {
+          $("#result").text(data.result);
+        });
+        return false;
+      });
+    });
+  </script>
+  <h1>jQuery Example</h1>
+  <p><input type=text size=5 name=a> +
+   =
+     <span id=result>?</span>
+  <p><a href=# id=calculate>calculate server side</a>
+
+</body>
+<html>
