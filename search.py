@@ -3,6 +3,7 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 gateway=JavaGateway()
 app = Flask(__name__)
+#Fixes same site
 CORS(app)
 
 @app.route("/search/<query>")
@@ -15,4 +16,6 @@ def empty():
 @app.route("/")
 def test():
     return render_template('index.html')
-app.run(host='0.0.0.0')
+#app.run(host='0.0.0.0')
+#app.run(host='10.253.197.28')
+app.run()
