@@ -1,7 +1,9 @@
 from py4j.java_gateway import JavaGateway
 from flask import Flask, jsonify, render_template, request
+from flask_cors import CORS
 gateway=JavaGateway()
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/search/<query>")
 def hello_world(query):

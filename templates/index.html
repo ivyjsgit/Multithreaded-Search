@@ -14,12 +14,13 @@
       </div>
       <script>
          function getHTML(){
+
          var ourRequest= new XMLHttpRequest();
+
          var userQuery=document.getElementById("query").value;
          var query='http://localhost:5000/search/'.concat(userQuery);
-         console.log(userQuery);
-         console.log(query)
-         
+
+
          ourRequest.open('GET', query);
          ourRequest.onload=function(){
            console.log(ourRequest.responseText);
