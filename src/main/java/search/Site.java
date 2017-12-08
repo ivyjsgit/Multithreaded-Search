@@ -3,9 +3,8 @@ import org.jsoup.nodes.Document;
 
 public class Site {
 	Document asDoc;
-	String[] site;
+	String[] site; //Using this allows us to get away easily with serializing
 	public Site(String url, String description, String text) {
-
 		this.site= new String[3];
 		this.site[0]=url;
 		this.site[1]=description;

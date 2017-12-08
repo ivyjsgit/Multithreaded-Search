@@ -4,15 +4,12 @@
 
 package search;
 
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Stack;
 
 import py4j.GatewayServer;
 
 public class EntryPoint {
 
-	private Stack stack;
 	searcher s;
 
 	public EntryPoint() {
@@ -22,20 +19,25 @@ public class EntryPoint {
 		s.start();
 	}
 
-public  String search(String query) {
-	String output="";
-	Iterator i =  s.search(query).iterator();
-	while(i.hasNext()) {
-		String url = (String) i.next();
-		output+="<a href=" +url+">" + url+"</a>" + "<br>";
+	public String search(String query) {
+		String output = "";
+		Iterator<?> i = s.search(query).iterator();
+		while (i.hasNext()) {
+			String url = (String) i.next();
+			output += "<a href=" + url + ">" + url + "</a>" + "<br>";
+		}
+		return output;
+
 	}
-	return output;
-	
-}
 
 	public static void main(String[] args) {
 		GatewayServer gatewayServer = new GatewayServer(new EntryPoint());
-		gatewayServer.start();
+		try {
+			gatewayServer.start();
+		} catch (py4j.Py4JNetworkException e) {
+			System.out.println("Server already running");
+			return;
+		}
 		System.out.println("Gateway Server Started");
 	}
 

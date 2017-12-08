@@ -5,8 +5,8 @@ import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class searcher implements Runnable {
-	Thread t;
-	String threadName;
+	private Thread t;
+	private String threadName;
 	ConcurrentHashMap<String, Site> visitedSites;
 
 	/**
@@ -18,6 +18,7 @@ public class searcher implements Runnable {
 		this.visitedSites = visitedSites;
 	}
 
+	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
@@ -42,6 +43,7 @@ public class searcher implements Runnable {
 				}
 			}
 		}
+		sc.close();
 
 	}
 	/***
@@ -56,8 +58,8 @@ public class searcher implements Runnable {
 	 * @param query the string to search for within the sites already visited
 	 * @return HashSet of all sites containing the query (inside a word, URL, text, etc.)
 	 */
-	public HashSet search(String query) {
-		HashSet<String> h = new HashSet();
+	public HashSet<String> search(String query) {
+		HashSet<String> h = new HashSet<String>();
 		for (Site siteClass : visitedSites.values()) {
 
 			if (siteClass.getText() != null && (siteClass.getText().toLowerCase().contains(query.toLowerCase())
@@ -72,8 +74,8 @@ public class searcher implements Runnable {
 	 * Get all visited sites
 	 * @return HashSet of visited sites
 	 */
-	public HashSet getAll() {
-		HashSet<String> h = new HashSet();
+	public HashSet<String> getAll() {
+		HashSet<String> h = new HashSet<String>();
 		for (Site siteClass : visitedSites.values()) {
 
 			h.add(siteClass.getUrl());
