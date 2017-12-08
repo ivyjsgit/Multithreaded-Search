@@ -28,6 +28,8 @@ dependencies {
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
-
+run{
+standardInput = System.in
+}
 // Define the main class for the application
 mainClassName = 'search.EntryPoint'
