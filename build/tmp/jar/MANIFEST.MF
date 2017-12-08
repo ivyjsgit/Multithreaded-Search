@@ -1,4 +1,2 @@
 Manifest-Version: 1.0
-Class-Path: commons-lang3-3.7.jar jsoup-1.8.3.jar py4j-0.8.1.jar
-Main-Class: search.EntryPoint
 

@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'Multithreaded-Search'
+rootProject.name = 'Multithreaded Search'

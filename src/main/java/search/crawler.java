@@ -12,11 +12,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 public class crawler implements Runnable {
-	private String threadName;
-	private Thread t;
+	String threadName;
+	Thread t;
 	public ConcurrentLinkedQueue<String> siteQueue;
 	public ConcurrentHashMap<String, Site> visitedSites;
-	private boolean debug;
+	boolean debug;
 
 	public crawler(String threadName, boolean debug) {
 		this.threadName = threadName;
@@ -26,7 +26,6 @@ public class crawler implements Runnable {
 
 	}
 
-	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		// Can also use stack for different type of
@@ -34,20 +33,19 @@ public class crawler implements Runnable {
 
 		try {
 			if (cache.getCacheAge() > 86400) {
-				//If older than 1 day, refresh the cache again
 				generateSites();
 			} else {
 				Object[] asObjArr = (Object[]) cache.readCache();
-				Iterator<String> keyIt = ((HashSet<String>) asObjArr[0]).iterator(); //This should always be the case if cache.txt hasn't been tampered with
-				Iterator<String[]> siteIt = ((HashSet<String[]>) asObjArr[1]).iterator();
+				Iterator keyIt = ((HashSet<String>) asObjArr[0]).iterator();
+				Iterator siteIt = ((HashSet<String[]>) asObjArr[1]).iterator();
 				while (keyIt.hasNext()) {
-					String[] siteArr = siteIt.next();
+					String[] siteArr = (String[]) siteIt.next();
 					// String url, String description, String text
 					Site newSite = new Site(siteArr[0], siteArr[1], siteArr[2]);
-					visitedSites.put(keyIt.next(), newSite);
+					visitedSites.put((String) keyIt.next(), newSite);
 				}
 			}
-		} catch (IOException e) { //Site doesn't exist
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			generateSites();
 		}
@@ -122,12 +120,12 @@ public class crawler implements Runnable {
 			System.out.println("Writing file");
 			// HashMaps aren't serializable, so we have to force it to be. HashSets and
 			// Arrays are, so we have to make it into those
-			HashSet<String> keys = new HashSet<String>();
-			HashSet<String[]> sites = new HashSet<String[]>();
+			HashSet<String> keys = new HashSet();
+			HashSet<String[]> sites = new HashSet();
 
 			for (String key : visitedSites.keySet()) {
 				keys.add(key);
-				sites.add(visitedSites.get(key).site); //Because .site is just a String[], we can get away with this easily
+				sites.add(visitedSites.get(key).site);
 			}
 
 			Object[] keyValues = new Object[2];

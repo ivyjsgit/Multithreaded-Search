@@ -34,10 +34,10 @@ public class mainWindow {
 	 * Launch the application.
 	 */
 	public void doSearch(crawler c, searcher s, JTextField textField) {
-		HashSet<?> h = s.search(textField.getText());
+		HashSet h = s.search(textField.getText());
 		String outputText = "";
 		textPane.add(new JLabel("<html>"));
-		Iterator<?> iter = h.iterator();
+		Iterator iter = h.iterator();
 		while (iter.hasNext()) {
 			String url = (String) iter.next();
 			outputText += ("<a href=" + url + ">" + url + "</a>" + "<br>");
