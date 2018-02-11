@@ -27,19 +27,7 @@ public class searcher implements Runnable {
 			if (query.toLowerCase().equals("quit")) {
 				break;
 			} else {
-				for (Site siteClass : visitedSites.values()) {
-
-					if (siteClass.getText() != null && (siteClass.getText().toLowerCase().contains(query.toLowerCase())
-							|| siteClass.getUrl().contains(query.toLowerCase()))) {
-
-						System.out.println(siteClass.getUrl());
-					}
-				}
 				System.out.println(visitedSites.size());
-				System.out.println(visitedSites);
-				if (visitedSites.size() >= 100) {
-					System.out.println("Reached max");
-				}
 			}
 		}
 

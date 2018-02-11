@@ -2,8 +2,10 @@ package search;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -71,44 +73,25 @@ public class crawler implements Runnable {
 			try {
 				docSite = Jsoup.connect(newSiteString).get();
 			} catch (Exception e) {
-				if (debug) {
-					if (e instanceof HttpStatusException) {
-						System.out.println("Site not accessible: " + newSiteString + ". Error code: "
-								+ ((HttpStatusException) e).getStatusCode());
-					} else if (e instanceof UnknownHostException) {
-						System.out.println("No connection.");
-						return;
-					} else if (e instanceof IOException) {
-						System.out.println("Too many redirections " + newSiteString);
-					}
-				}
+
 			}
 
 			for (String siteString : getLinks.getLinks(docSite)) {
 				Site visitingSite = new Site(siteString, "Placeholder", newSite.text());
 
 				try {
-
-					if (!visitedSites.containsKey(newSiteString)) {
-						newSite = Jsoup.connect(siteString).get();
-						count++;
-						visitingSite = new Site(siteString, "Placeholder", newSite.text()); // Only puts the parent
-						siteQueue.add(siteString);
-
-					} else {
-						if (debug)
-							System.out.println("Already visited");
+					ArrayList<String> allLinks = new ArrayList<>();
+					Site returnedSite = visitSite(visitedSites,siteString).get();
+					try {
+						 allLinks = getLinks.getLinks(returnedSite.asDoc);
+					}catch (NullPointerException e){
+						System.out.println("No links");
 					}
-				} catch (Exception e) {
-					if (debug) {
-						if (e instanceof HttpStatusException) {
-							System.out.println("Site not accessible: " + siteString + ". Error code: "
-									+ ((HttpStatusException) e).getStatusCode());
+					siteQueue.addAll(allLinks);
+					visitedSites.put(siteString,returnedSite);
 
-						} else {
-							System.out.println("Too many redirections " + siteString);
-						}
-					}
+				} catch (IOException e) {
+					e.getStackTrace();
 				}
 				visitedSites.put(siteString, visitingSite);
 
@@ -144,6 +127,19 @@ public class crawler implements Runnable {
 	public void start() {
 		t = new Thread(this, threadName);
 		t.start();
+	}
+	public static Optional<Site> visitSite(ConcurrentHashMap<String, Site> visitedSites, String siteString) throws IOException{
+		Document newSite;
+		Site visitingSite = new Site();
+		if (!visitedSites.containsKey(siteString)) {
+			newSite = Jsoup.connect(siteString).get();
+			 visitingSite = new Site(siteString, "Placeholder", newSite.text()); // Only puts the parent
+			visitingSite.setAsDoc(newSite);
+
+//			siteQueue.add(siteString);
+
+		}
+		return Optional.of(visitingSite);
 	}
 
 }

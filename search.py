@@ -17,5 +17,5 @@ def empty():
 def test():
     return render_template('index.html')
 #app.run(host='0.0.0.0')
-#app.run(host='10.253.197.28')
-app.run()
+app.run(host='127.0.0.1')
+#app.run()
