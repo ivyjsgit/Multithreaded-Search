@@ -2,16 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ca4ef48-4e57-4420-b533-dfa16412eeaf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" />
-      <change beforePath="$PROJECT_DIR$/cache.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/search.py" afterPath="$PROJECT_DIR$/search.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/search/Main.java" afterPath="$PROJECT_DIR$/src/main/java/search/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/search/crawler.java" afterPath="$PROJECT_DIR$/src/main/java/search/crawler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/search/getLinks.java" afterPath="$PROJECT_DIR$/src/main/java/search/getLinks.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/search/searcher.java" afterPath="$PROJECT_DIR$/src/main/java/search/searcher.java" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/constant-values.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/deprecated-list.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/class-use/mainWindow.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/class-use/updateVisited.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/mainWindow.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/package-frame.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/package-summary.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/package-tree.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/package-use.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/gui/updateVisited.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/help-doc.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-frame.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-summary.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-tree.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/package-list" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/Main.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/Site.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/class-use/Main.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/class-use/Site.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/class-use/crawler.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/class-use/getLinks.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/class-use/searcher.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/crawler.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/getLinks.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/package-frame.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/package-summary.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/package-tree.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/package-use.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/search/searcher.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/stylesheet.css" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -62,7 +99,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cache.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cache.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/search/cache.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -85,8 +132,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/search/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -441,6 +488,7 @@
         <option value="$PROJECT_DIR$/src/main/java/search/crawler.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/searcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/search/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -519,6 +567,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="add_unversioned_files" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -652,12 +701,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518387036830</updated>
-      <workItem from="1518387041831" duration="1891000" />
+      <workItem from="1518387041831" duration="2049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1891000" />
+    <option name="totallyTimeSpent" value="2049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="825" extended-state="0" />
@@ -678,11 +727,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -716,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/getLinks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/search/searcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -734,18 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="85" column="24" lean-forward="false" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        <state relative-caret-position="60">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -758,10 +791,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/cache.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/getLinks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/search/crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="85" column="24" lean-forward="false" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
