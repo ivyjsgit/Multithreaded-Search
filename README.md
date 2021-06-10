@@ -5,11 +5,11 @@ Search
  * Crawler and searcher work on separate threads
 * Create GUI possibly?
 
-##Todo
+## Todo
 -----
 Web UI
 
-##Completed
+## Completed
 -----
 * Caching
 * Gui
